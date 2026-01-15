@@ -1,2 +1,6 @@
 Martes, 28.6, 47
 Miércoles, 33.3, 75
+Jueves, 29.8, 15
+Viernes, 32.3, 58
+Sábado, 31.5, 36
+Domingo, 30.3, 25
