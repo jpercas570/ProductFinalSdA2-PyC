@@ -1,0 +1,4 @@
+Temperatura  Viento
+28  57
+19  20
+30  18
