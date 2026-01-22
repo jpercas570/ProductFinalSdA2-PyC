@@ -48,26 +48,14 @@ public class DataStorm {
         // 3. (Opcional) Si la temperatura es menor de 0, mostrar alerta de helada.
         System.out.println("Analizando " + dia + "..."); // Mensaje de control
         // ESCRIBE AQUÍ TUS "IF"
-            if (dia = Lunes) {if (temp>35){ System.out.println("hoy lunes hace mucho calor tenga cuidado");
-            }if (temp<0){System.out.println("hoy lunes hace mucho frío `podría helarse"}
-            else{System.out.println("hoy lunes la temperatura es correcta"}
+            if (temp>35){ 
+                System.out.println("hoy lunes hace mucho calor tenga cuidado");
             }
-            if (dia = Martes) {if (temp>35){ System.out.println("hoy martes hace mucho calor tenga cuidado");
-            }if (temp<0){System.out.println("hoy martes hace mucho frío `podría helarse"}
-            else{System.out.println("hoy martes la temperatura es correcta"}
-            }
-            if (dia = Miercoles) {if (temp>35){ System.out.println("hoy miercoles hace mucho calor tenga cuidado");
-            }if (temp<0){System.out.println("hoy miercoles hace mucho frío `podría helarse"}
-            else{System.out.println("hoy miercoles la temperatura es correcta"}
-            }
-            if (dia = jueves) {if (temp>35){ System.out.println("hoy jueves  hace mucho calor tenga cuidado");
-            }if (temp<0){System.out.println("hoy jueves hace mucho frío `podría helarse"}
-            else{System.out.println("hoy jueves la temperatura es correcta"}
-            }
-            if (dia = viernes) {if (temp>35){ System.out.println("hoy viernes  hace mucho calor tenga cuidado");
-            }if (temp<0){System.out.println("hoy viernes hace mucho frío `podría helarse"}
-            else{System.out.println("hoy viernes la temperatura es correcta"}
-            }
+            if (temp<0){System.out.println("hoy lunes hace mucho frío podría helarse");}
+            else{System.out.println("hoy lunes la temperatura es correcta");}
+            
+             
+            
 
         // ----------------------------
     }
