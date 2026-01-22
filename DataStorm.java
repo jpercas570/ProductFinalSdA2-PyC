@@ -45,6 +45,9 @@ public class DataStorm {
         // --- TAREA PARA EL ALUMNO ---
         // 1. Si la temperatura es mayor de 35, mostrar alerta de calor.
         // 2. Si el viento es mayor de 50, mostrar alerta de viento fuerte.
+        if (viento >= 50) {
+            System.out.println("¡ALERTA! Viento fuerte detectado en " + dia);
+        }
         // 3. (Opcional) Si la temperatura es menor de 0, mostrar alerta de helada.
         System.out.println("Analizando " + dia + "..."); // Mensaje de control
         // ESCRIBE AQUÍ TUS "IF"
