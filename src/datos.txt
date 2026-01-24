@@ -1,5 +1,5 @@
 Martes, 28.6, 47, 68.5, S
-Miércoles, 33.3, 75.7, 72, N
+Miércoles, 33.3, 75, 72, N
 Jueves, 29.8, 15, 56.3, M
 Viernes, 32.3, 58, 98.9, L
 Sábado, 31.5, 36, 95.7, T
