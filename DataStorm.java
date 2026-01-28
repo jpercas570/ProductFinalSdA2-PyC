@@ -49,6 +49,9 @@ public class DataStorm {
         System.out.println("Analizando " + dia + "..."); // Mensaje de control
         // ESCRIBE AQUÍ TUS "IF"
 
+        if (temp < 0) {
+            System.out.println("ALERTA: Helada en " + dia + " (" + temp + "°C).");
+        }
         // ----------------------------
     }
 }
