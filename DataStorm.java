@@ -48,15 +48,13 @@ public class DataStorm {
         // 3. (Opcional) Si la temperatura es menor de 0, mostrar alerta de helada.
         System.out.println("Analizando " + dia + "..."); // Mensaje de control
         // ESCRIBE AQUÍ TUS "IF"
-            if (temp>35){ 
+        if (temp>35){ 
                 System.out.println("hoy  hace mucho calor tenga cuidado");
-            }
-            if (temp<0){System.out.println("hoy  hace mucho frío podría helarse");}
-            else{System.out.println("hoy la temperatura es correcta");}
-            
-             
-            
-
+        }
+        if (temp<0){System.out.println("hoy  hace mucho frío podría helarse");
+        }else{System.out.println("hoy la temperatura es correcta");
+        }
+        
         if (viento >= 50) {
             System.out.println("¡ALERTA! Viento fuerte detectado en " + dia);
         }
