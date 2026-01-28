@@ -1,0 +1,5 @@
+Lunes,22.5,15
+Martes,36.8,45
+Miercoles,38.2,60
+Jueves,25.0,10
+Viernes,19.5,5
