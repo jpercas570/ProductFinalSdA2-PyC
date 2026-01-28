@@ -49,14 +49,14 @@ public class DataStorm {
         System.out.println("Analizando " + dia + "..."); // Mensaje de control
         // ESCRIBE AQUÍ TUS "IF"
             if (temp>35){ 
-                System.out.println("hoy lunes hace mucho calor tenga cuidado");
+                System.out.println("hoy  hace mucho calor tenga cuidado");
             }
-            if (temp<0){System.out.println("hoy lunes hace mucho frío podría helarse");}
-            else{System.out.println("hoy lunes la temperatura es correcta");}
+            if (temp<0){System.out.println("hoy  hace mucho frío podría helarse");}
+            else{System.out.println("hoy la temperatura es correcta");}
             
              
             
 
-        // ----------------------------
+        
     }
 }
