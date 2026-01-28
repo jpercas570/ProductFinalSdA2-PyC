@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class DataStorm {
@@ -8,47 +9,89 @@ public class DataStorm {
         procesarArchivo("datos.txt");
 
         System.out.println("=========================================");
-        System.out.println("Análisis finalizado.");
+        System.out.println("Analisis finalizado.");
     }
 
     /**
      * SUBPROBLEMA 1: Leer el archivo línea a línea
      */
+    @SuppressWarnings("ConvertToTryWithResources") //esto me lo ha recordado vs code yo no tengo ni idea jajajajaj
     public static void procesarArchivo(String nombreArchivo) {
         try {
-            File archivo = new File(nombreArchivo);
+            //NO TOCAR ESTO DE AQUI ABAJO PORQUE LLEVO COMO 2 HORAS INTENTANDO QUE FUNCIONE Y ME DUELE LA CABEZA DIOS
+            String rutaCompleta = System.getProperty("user.dir") + File.separator + "src" + File.separator + nombreArchivo;
+            File archivo = new File(rutaCompleta);
             Scanner lector = new Scanner(archivo);
             // El bucle "while" recorre el archivo hasta que no queden más líneas
             while (lector.hasNextLine()) {
                 String linea = lector.nextLine();
                 // Dividimos la línea por las comas
-                String[] partes = linea.split(",");
+                String[] partes = linea.split(", ");
                 // Guardamos cada trozo en una variable
                 String dia = partes[0];
                 double temp = Double.parseDouble(partes[1]);
                 int viento = Integer.parseInt(partes[2]);
+                double humedad = Double.parseDouble(partes[3]);
+                char state = partes[4].charAt(0);
                 // Llamada al segundo subproblema para analizar los datos
-                analizarAlertas(dia, temp, viento);
+                analizarAlertas(dia, temp, viento, humedad, state);
             }
             lector.close(); // Cerramos el archivo al terminar
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
             System.out.println("ERROR: No se pudo leer el archivo. Comprueba que 'datos.txt' existe.");
         }
+        catch (NumberFormatException e) {
+            System.out.println("ERROR: Algun dato esta mal. Mira bien los puntos, las comas y que no haya doubles en vez de enteros en sus sitios correspondientes.");
+        }
+        // He tenido que generar este último pq puse un dato mal dios y me tiré como 30 minutos buscando el error pensando que era del archivo jajajajaja
     }
 
     /**
-     * SUBPROBLEMA 2: Lógica de decisiones
-     * Aquí es donde el alumnado debe aplicar los conocimientos de
-     * Programación Estructurada
+     * SUBPROBLEMA 2: Analizar los datos y generar alertas
      */
-    public static void analizarAlertas(String dia, double temp, int viento) {
-        // --- TAREA PARA EL ALUMNO ---
-        // 1. Si la temperatura es mayor de 35, mostrar alerta de calor.
-        // 2. Si el viento es mayor de 50, mostrar alerta de viento fuerte.
-        // 3. (Opcional) Si la temperatura es menor de 0, mostrar alerta de helada.
-        System.out.println("Analizando " + dia + "..."); // Mensaje de control
-        // ESCRIBE AQUÍ TUS "IF"
+    public static void analizarAlertas(String dia, double temp, int viento, double humedad, char state) {
+        System.out.println("Analisis para " + dia + ":");
+        
+        //ALERTAS
+        boolean alertaTormenta = (state == 'T');
+        boolean alertaCalor = (temp > 35);
+        boolean alertaViento = (viento > 50);
 
-        // ----------------------------
+        //ESTADOS DEL DIA
+        boolean soleado = (state == 'S');
+        boolean nublado = (state == 'N');
+        boolean lluvioso = (state == 'L');
+        boolean mixto = (state == 'M');
+
+         // Mostrar condiciones del día
+        
+        if (alertaTormenta) {
+            System.out.println("  ALERTA DE TORMENTA! Cuidado con los rayos.");
+        }
+        if (alertaCalor) {
+            System.out.println("  ALERTA DE CALOR EXTREMO! Temperaturas superiores a los 35°C.");
+        }
+        if (alertaViento) {
+            System.out.println("  ALERTA DE VIENTO FUERTE! Vientos superiores a los 50 km/h.");
+        }
+        if (soleado) {
+            System.out.println("  Dia soleado, disfrute.");
+        }
+        if (nublado) {
+            System.out.println("  Dia nublado.");
+        }
+        if (lluvioso && temp >= 5) {
+            System.out.println("  Dia lluvioso.");
+        }
+        else if (lluvioso && temp < 5) {
+            System.out.println("  ALERTA DE NIEVE O GRANIZO! Temperaturas bajo 5°C con lluvia.");
+        }
+        if (mixto) {
+            System.out.println("  Dia mixto, se alternaran momentos de Sol y nubes.");
+        }
+        else if (!alertaTormenta && !alertaCalor && !alertaViento) {
+            System.out.println("  Condiciones normales. No hay alertas.");
+        }
+        System.out.println(); // Línea en blanco para separar días
     }
 }
