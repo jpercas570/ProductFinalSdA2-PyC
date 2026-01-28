@@ -5,6 +5,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 class WeatherData {
+    public static void main(String[] args) {
+        WeatherGenerator.main(args);
+    }
+
     private int clima = -1;
     private int dias = 0;
     private int estacion = -1;
@@ -13,7 +17,7 @@ class WeatherData {
     private int simuviento = 0;
     private double simuhumedad = 0.0;
     private char estado;
-    private String rutaCompleta = System.getProperty("user.dir") + File.separator + "JaviProject" + File.separator + "ProductFinalSdA2-PyC" + File.separator + "src" + File.separator + "datos.txt";
+    private String rutaCompleta = System.getProperty("user.dir") + File.separator + "src" + File.separator + "datos.txt";
     private File archivo = new File(rutaCompleta);
 
     public WeatherData() {}
@@ -49,6 +53,7 @@ public class WeatherGenerator {
         generarArchivo(data.getArchivo(), "datos.txt");
         preguntaUser(data);
         escribirArchivo(data.getArchivo(), data);
+        System.out.println(data.getRutaCompleta());
         System.out.println("=========================================");
         System.out.println("Prediccion generada.");
     }

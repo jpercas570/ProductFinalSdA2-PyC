@@ -19,7 +19,7 @@ public class DataStorm {
     public static void procesarArchivo(String nombreArchivo) {
         try {
             //NO TOCAR ESTO DE AQUI ABAJO PORQUE LLEVO COMO 2 HORAS INTENTANDO QUE FUNCIONE Y ME DUELE LA CABEZA DIOS
-            String rutaCompleta = System.getProperty("user.dir") + File.separator + "JaviProject" + File.separator + "ProductFinalSdA2-PyC" + File.separator + "src" + File.separator + nombreArchivo;
+            String rutaCompleta = System.getProperty("user.dir") + File.separator + "src" + File.separator + nombreArchivo;
             File archivo = new File(rutaCompleta);
             Scanner lector = new Scanner(archivo);
             // El bucle "while" recorre el archivo hasta que no queden más líneas
@@ -55,7 +55,7 @@ public class DataStorm {
         //ALERTAS
         boolean alertaTormenta = (state == 'T');
         boolean alertaCalor = (temp > 35);
-        boolean alertaViento = (viento > 30);
+        boolean alertaViento = (viento > 50);
 
         //ESTADOS DEL DIA
         boolean soleado = (state == 'S');
@@ -72,7 +72,7 @@ public class DataStorm {
             System.out.println("  ALERTA DE CALOR EXTREMO! Temperaturas superiores a los 35°C.");
         }
         if (alertaViento) {
-            System.out.println("  ALERTA DE VIENTO FUERTE! Vientos superiores a los 30 km/h.");
+            System.out.println("  ALERTA DE VIENTO FUERTE! Vientos superiores a los 50 km/h.");
         }
         if (soleado) {
             System.out.println("  Dia soleado, disfrute.");
@@ -89,7 +89,7 @@ public class DataStorm {
         if (mixto) {
             System.out.println("  Dia mixto, se alternaran momentos de Sol y nubes.");
         }
-        if (!alertaTormenta && !alertaCalor && !alertaViento) {
+        else if (!alertaTormenta && !alertaCalor && !alertaViento) {
             System.out.println("  Condiciones normales. No hay alertas.");
         }
         System.out.println(); // Línea en blanco para separar días
