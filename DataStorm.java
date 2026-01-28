@@ -33,7 +33,7 @@ public class DataStorm {
             lector.close(); // Cerramos el archivo al terminar
         } catch (Exception e) {
             System.out.println("ERROR: No se pudo leer el archivo. Comprueba que 'datos.txt' existe.");
-        }
+        } 
     }
 
     /**
@@ -57,6 +57,11 @@ public class DataStorm {
              
             
 
+        if (viento >= 50) {
+            System.out.println("¡ALERTA! Viento fuerte detectado en " + dia);
+        }
+
+        // ----------------------------
         
     }
 }
