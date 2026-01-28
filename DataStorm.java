@@ -5,7 +5,7 @@ public class DataStorm {
     public static void main(String[] args) {
         System.out.println("=== SISTEMA DE ALERTAS DATASTORM 1.0 ===");
         // Llamada al primer subproblema: Procesar el archivo
-        procesarArchivo("datos.txt");
+        procesarArchivo("datossergio.txt");
 
         System.out.println("=========================================");
         System.out.println("Análisis finalizado.");
@@ -49,6 +49,17 @@ public class DataStorm {
         System.out.println("Analizando " + dia + "..."); // Mensaje de control
         // ESCRIBE AQUÍ TUS "IF"
 
+        if (temp > 35) {
+            System.out.println("ALERTA, te puedes derretir: La temperatura es de " + temp + "°C.");
+        }
+
+        if (viento > 50) {
+            System.out.println("ALERTA, podrías salir volando: El viento es de " + viento + " km/h.");
+        }
+
+        if (temp < 0) {
+            System.out.println("ALERTA, podrías convertirte en un cubito: La temperatura es de " + temp + "°C.");
+        }
         // ----------------------------
     }
 }
