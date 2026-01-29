@@ -65,12 +65,12 @@ public class DataStorm {
             System.out.println("ALERTA, te puedes derretir: La temperatura es de " + temp + "°C.");
         }
 
-        if (viento > 50) {
-            System.out.println("ALERTA, podrías salir volando: El viento es de " + viento + " km/h.");
+        if (temp < 0) {
+            System.out.println("ALERTA: Helada en " + dia + " (" + temp + "°C).");
         }
 
-        if (temp < 0) {
-            System.out.println("ALERTA, podrías convertirte en un cubito: La temperatura es de " + temp + "°C.");
+        if (viento > 50) {
+            System.out.println("ALERTA, podrías salir volando: El viento es de " + viento + " km/h.");
         }
         // ----------------------------
          // Mostrar condiciones del día
