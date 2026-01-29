@@ -1,3 +1,0 @@
-Temperatura Viento
-30  20
-20  10
