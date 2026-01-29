@@ -48,21 +48,83 @@ public class DataStorm {
         // 3. (Opcional) Si la temperatura es menor de 0, mostrar alerta de helada.
         System.out.println("Analizando " + dia + "..."); // Mensaje de control
         // ESCRIBE AQUÍ TUS "IF"
-
-        // 1. Si la temperatura es mayor de 35, mostrar alerta de calor.
-        if (temp > 35)
-        {
-        System.out.println("---ALERTA DE CALOR---");
-        }
-        // 2. Si el viento es mayor de 50, mostrar alerta de viento fuerte.
-        if (viento > 50)
-        {
-        System.out.println("---ALERTA DE VIENTO FUERTE---");
-        }
-        // 3. (Opcional) Si la temperatura es menor de 0, mostrar alerta de helada.
-        if (temp < 0)
-        {
-        System.out.println("---ALERTA DE HELADA---");
-        }
+            if(dia = Lunes){    
+                if(temp > 35){
+                    System.out.println("Alerta de calor")
+                }
+                if(viento > 50){
+                    System.out.println("Alerta de viento fuerte")
+                }
+                if(temp < 0){
+                    System.out.println("Alerta de helada")
+                }
+            }
+            if(dia = Martes){    
+                if(temp > 35){
+                    System.out.println("Alerta de calor")
+                }
+                if(viento > 50){
+                    System.out.println("Alerta de viento fuerte")
+                }
+                if(temp < 0){
+                    System.out.println("Alerta de helada")
+                }
+            }
+            if(dia = Miercoles){    
+                if(temp > 35){
+                    System.out.println("Alerta de calor")
+                }
+                if(viento > 50){
+                    System.out.println("Alerta de viento fuerte")
+                }
+                if(temp < 0){
+                    System.out.println("Alerta de helada")
+                }
+            }
+            if(dia = Jueves){    
+                if(temp > 35){
+                    System.out.println("Alerta de calor")
+                }
+                if(viento > 50){
+                    System.out.println("Alerta de viento fuerte")
+                }
+                if(temp < 0){
+                    System.out.println("Alerta de helada")
+                }
+            }
+            if(dia = Viernes){    
+                if(temp > 35){
+                    System.out.println("Alerta de calor")
+                }
+                if(viento > 50){
+                    System.out.println("Alerta de viento fuerte")
+                }
+                if(temp < 0){
+                    System.out.println("Alerta de helada")
+                }
+            }
+            if(dia = Sabado){    
+                if(temp > 35){
+                    System.out.println("Alerta de calor")
+                }
+                if(viento > 50){
+                    System.out.println("Alerta de viento fuerte")
+                }
+                if(temp < 0){
+                    System.out.println("Alerta de helada")
+                }
+            }
+            if(dia = Domingo){    
+                if(temp > 35){
+                    System.out.println("Alerta de calor")
+                }
+                if(viento > 50){
+                    System.out.println("Alerta de viento fuerte")
+                }
+                if(temp < 0){
+                    System.out.println("Alerta de helada")
+                }
+            }
+        // ----------------------------
     }
 }
