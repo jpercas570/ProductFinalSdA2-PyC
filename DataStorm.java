@@ -6,7 +6,7 @@ public class DataStorm {
     public static void main(String[] args) {
         System.out.println("=== SISTEMA DE ALERTAS DATASTORM 1.0 ===");
         // Llamada al primer subproblema: Procesar el archivo
-        procesarArchivo("datos.txt");
+        procesarArchivo("datossergio.txt");
 
         System.out.println("=========================================");
         System.out.println("Analisis finalizado.");
@@ -54,8 +54,6 @@ public class DataStorm {
         
         //ALERTAS
         boolean alertaTormenta = (state == 'T');
-        boolean alertaCalor = (temp > 35);
-        boolean alertaViento = (viento > 50);
 
         //ESTADOS DEL DIA
         boolean soleado = (state == 'S');
@@ -63,16 +61,22 @@ public class DataStorm {
         boolean lluvioso = (state == 'L');
         boolean mixto = (state == 'M');
 
+        if (temp > 35) {
+            System.out.println("ALERTA, te puedes derretir: La temperatura es de " + temp + "°C.");
+        }
+
+        if (viento > 50) {
+            System.out.println("ALERTA, podrías salir volando: El viento es de " + viento + " km/h.");
+        }
+
+        if (temp < 0) {
+            System.out.println("ALERTA, podrías convertirte en un cubito: La temperatura es de " + temp + "°C.");
+        }
+        // ----------------------------
          // Mostrar condiciones del día
         
         if (alertaTormenta) {
             System.out.println("  ALERTA DE TORMENTA! Cuidado con los rayos.");
-        }
-        if (alertaCalor) {
-            System.out.println("  ALERTA DE CALOR EXTREMO! Temperaturas superiores a los 35°C.");
-        }
-        if (alertaViento) {
-            System.out.println("  ALERTA DE VIENTO FUERTE! Vientos superiores a los 50 km/h.");
         }
         if (soleado) {
             System.out.println("  Dia soleado, disfrute.");
